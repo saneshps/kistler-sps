@@ -1,0 +1,18 @@
+#top {
+
+    font-weight: bold;
+    font-size: 25px;
+    bottom: 30px;
+    right: 17px;
+    border-bottom: 0;
+    padding: 10px;
+    color: #FFFFFF;
+    position: fixed;
+    z-index: 99;
+
+    i {
+        color: #fff;
+        padding: 11px;
+        background: $brand-color;
+    }
+}

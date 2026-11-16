@@ -1,0 +1,385 @@
+// ===================== blogs Home page start
+
+.blogs-home-area {
+    padding: 90px 0 100px 0;
+
+    @include respond-below(xl) {
+        padding: 70px 0 90px 0;
+    }
+
+    @include respond-below(lg) {
+        padding: 50px 0 10px 0;
+    }
+
+    @include respond-below(md) {
+        padding: 50px 0 10px 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 40px 0 0px 0;
+    }
+
+    .blogs-home-head {
+
+        padding-right: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        @include respond-below(lg) {
+            padding-right: 30px;
+        }
+
+        @include respond-below(md) {
+            padding: 0 0 50px 0;
+        }
+
+        @include respond-below(sm) {
+            text-align: justify;
+        }
+
+
+        h2 {
+            position: relative;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 0 20px 0;
+
+            @include respond-below(md) {
+                padding-left: 40px;
+            }
+
+            @include respond-below(sm) {
+                padding-left: 40px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 26px;
+                left: 0;
+                width: 70px;
+                height: 4px;
+                background: $brand-color;
+
+                @include respond-below(lg) {
+                    top: 18px;
+                }
+
+                @include respond-below(md) {
+                    top: 14px;
+                    width: 35px;
+                }
+
+                @include respond-below(sm) {
+                    top: 14px;
+                    width: 35px;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+}
+
+
+// ===================== blogs Home page end
+
+
+
+// ===================== blogs list page start
+.blog-list-area {
+    padding: 50px 0 80px 0;
+
+    @include respond-below(xl) {
+        padding: 30px 0;
+    }
+
+    @include respond-below(lg) {
+        padding: 30px 0;
+    }
+
+    @include respond-below(md) {
+        padding: 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 40px 0 0px 0;
+    }
+
+    .blog-list-head {
+
+        padding-right: 80px;
+
+        @include respond-below(lg) {
+            padding-right: 30px;
+        }
+
+        @include respond-below(md) {
+            padding: 0 0 50px 0;
+        }
+
+
+        h2 {
+            position: relative;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 0 20px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 26px;
+                left: 0;
+                width: 70px;
+                height: 4px;
+                background: $brand-color;
+
+            }
+
+        }
+
+    }
+
+
+
+}
+
+// ===================== blogs list page end
+
+
+
+// ===================== blog-list-main-box Start
+.blog-list-main-box-area {
+
+    padding: 0 0 60px 0;
+
+    .post-slide {
+        padding: 0 15px;
+    }
+
+    .post-slide .post-img {
+        position: relative;
+    }
+
+    .post-slide .post-img:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s ease-out 0s;
+    }
+
+    .post-slide .post-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .post-slide .post-img:hover:before {
+        top: 0;
+        left: 0;
+        background: rgb(0 122 57 / 68%);
+    }
+
+    .post-slide .post-img a {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        opacity: 0;
+        transition: all 0.5s ease-out 0s;
+    }
+
+    .post-slide .post-img>a>i {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        line-height: 47px;
+    }
+
+    .post-slide .post-img a:hover:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation: hoverEffect 1.3s ease-out 75ms;
+        -webkit-animation: hoverEffect 1.3s ease-out 75ms;
+        -moz-animation: hoverEffect 1.3s ease-out 75ms;
+    }
+
+    .post-slide .post-img:hover>a {
+        opacity: 1;
+    }
+
+    .post-slide .post-content {
+        padding: 20px 15px;
+        background: $brand-color;
+        color: #fff;
+        margin: 2px 0 0 0;
+        border-radius: 0 0px 20px 0px;
+    }
+
+    .post-slide .post-title>a {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+    }
+
+    .post-slide .post-title>a:hover {
+        color: #f7f7f7d1;
+        text-decoration: none;
+    }
+
+    .post-slide .post-description {
+        font-size: 16px;
+        color: #fff;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .post-slide .post-description:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #999;
+        display: block;
+    }
+
+    .post-slide .post-bar {
+        padding: 0;
+        list-style: none;
+    }
+
+    .post-slide .post-bar>li {
+        display: inline-block;
+    }
+
+    .post-slide .post-date,
+    .post-slide .comment>a {
+        color: #fff;
+    }
+
+    .post-slide .post-date>i,
+    .post-slide .comment i {
+        margin-right: 7px;
+    }
+
+    .post-slide .comment {
+        float: right;
+    }
+
+    .post-slide .comment>a:hover {
+        text-decoration: none;
+        color: $brand-color;
+    }
+
+    @-webkit-keyframes hoverEffect {
+        0% {
+            opacity: 0.3;
+        }
+
+        40% {
+            opacity: 0.5;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        100% {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+            -webkit-transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes hoverEffect {
+        0% {
+            opacity: 0.3;
+        }
+
+        40% {
+            opacity: 0.5;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        100% {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+            -moz-transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    @keyframes hoverEffect {
+        0% {
+            opacity: 0.3;
+        }
+
+        40% {
+            opacity: 0.5;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        100% {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #fff, 0 0 0 10px rgba(255, 255, 255, 0.5);
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .blog-list-main-box {
+        margin: 0 0 40px 0;
+    }
+
+
+}
+
+// ===================== blog-list-main-box end
+
+
+// ===================== blog-details-area start
+.blog-details-area {
+    padding: 40px 0 60px 0;
+
+    @include respond-below(lg) {
+        padding: 20px 0 50px 0;
+    }
+
+    @include respond-below(md) {
+        padding: 20px 0 50px 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 20px 0 10px 0;
+    }
+
+    .blog-details-pic {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+// ===================== blog-details-area end

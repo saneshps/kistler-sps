@@ -1,0 +1,218 @@
+// personal-distributors-area start
+.personal-distributors-area {
+
+    padding: 70px 0 70px 0;
+    @include respond-below(sm) {
+        padding: 50px 0 30px 0;
+    }
+
+
+    .personal-area {
+
+        background: $brand-color;
+        padding: 30px 30px;
+        border-radius: 6px;
+
+        @include respond-below(sm) {
+            padding: 15px 10px;
+        }
+
+        .personal-pic {
+
+            padding: 0 30px 0 20px;
+
+            @include respond-below(sm) {
+                padding: 0 20px 0 20px;
+            }
+            img {
+                width: 100%;
+                border-radius: 6px;
+            }
+        }
+
+        .personal-details {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 10px 0 0 20px;
+
+            @include respond-below(xl) {
+                margin: 0;
+                padding: 0;
+            }
+            @include respond-below(lg) {
+                padding: 10px 0 0 20px;
+            }
+            @include respond-below(md) {
+                padding: 10px 0 0 20px;
+            }
+            @include respond-below(sm) {
+                padding: 10px 0 0 20px;
+            }
+
+
+            h5 {
+                color: #fff;
+                line-height: 28px;
+            }
+
+            h4 {
+                color: #fff;
+                margin: 20px 0 10px 0;
+                font-weight: 600 !important;
+            }
+
+            p {
+                color: #fff;
+            }
+
+        }
+    }
+
+    .distribute {
+        background: $brand-color;
+        padding: 30px 50px;
+        border-radius: 6px;
+
+        @include respond-below(xl) {
+            padding: 20px 40px;
+        }
+
+        @include respond-below(md) {
+          padding: 30px 30px;
+        }
+
+        @include respond-below(sm) {
+            padding: 30px 15px;
+            margin: 30px 0 0 0;
+        }
+      
+
+        h2 {
+            position: relative;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            margin: 0 0 20px 0;
+            @include respond-below(md) {
+                padding-left: 0px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 26px;
+                left: 0;
+                width: 70px;
+                height: 4px;
+                background: #fff;
+
+                @include respond-below(md) {
+                   display: none;
+                }
+
+            }
+
+        }
+
+        h5 {
+            color: #fff;
+            margin: 0 0 40px 0;
+        }
+ 
+        .distriSwiper  { 
+
+            .swiper-slide {
+                text-align: center;
+                border-radius: 6px;
+                position: relative;
+
+                img {
+                    width: 100%; 
+                    border-radius: 6px;
+                }
+
+                h3 {
+                    line-height: 10px;
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    &::after
+                    {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        width: 100%;
+                        height: 100%;
+                        background: #32323282;
+                        z-index: 1;
+                        border-radius: 6px;
+                    }
+
+                    a {
+                        font-size: 1.3rem !important;
+                        color: #fff;
+                        text-decoration: none;
+                        position: relative;
+                        z-index: 9999;
+                        line-height: 24px;
+
+                        @include respond-below(lg) {
+                            font-size: 1.1rem !important;
+                        }
+
+                        &:hover {
+                            color: rgb(236, 236, 236);
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+               
+
+            }
+
+ 
+            .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+            .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+                width: 25px !important;
+                height: 4px !important;
+                border-radius: 0 !important;
+                visibility: inherit !important;
+                margin: 50px 5px 0 5px !important;
+                background: #fff;
+            }
+
+            .swiper-pagination {
+                position: relative !important;
+            }
+
+
+        }
+
+        .more
+        {
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: end;
+        }
+
+
+    }
+}
+
+// personal-distributors-area end

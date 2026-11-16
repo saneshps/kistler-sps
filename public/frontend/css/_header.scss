@@ -1,0 +1,732 @@
+.section-home {
+    position: relative;
+    min-height: 100vh;
+    background: url(bg.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-home:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to top, #23252B, transparent);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+
+.section-home h1 {
+    color: #fff;
+    font-size: 10vw;
+    font-weight: 800;
+    text-shadow: 0 5px 25px rgba(157, 10, 10, 0.2);
+    opacity: 0.3;
+}
+
+.d-flex-right {
+    display: flex !important;
+    justify-content: right;
+}
+
+
+.section-two {
+    min-height: 100vh;
+    background: #23252B;
+}
+
+.section-two h2 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.section-two p {
+    color: #fff;
+    font-size: 1em;
+    margin: 30px 0;
+}
+
+
+
+header {
+    z-index: 999;
+    position: relative;
+    top: 0px;
+    right: 0;
+    background: #007a39;
+    text-shadow: 0 5px 25px rgb(157 10 10 / 20%);
+    padding: 0 70px;
+    transition: 0.6s;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 57%;
+    margin: 5px 0 0 auto;
+
+    @include respond-below(xl) {
+        padding: 0 40px;
+        width: 70%;
+        margin: 0px 0 0 auto;
+    }
+
+    @include respond-below(lg) {
+        position: relative;
+        top: -61px;
+        height: 40px;
+        border-radius: 5px;
+        right: 10px;
+        width: 50px;
+    }
+
+    @include respond-below(md) {
+        top: -60px;
+        right: 20px;
+        width: 50px;
+    }
+
+    @include respond-below(sm) {
+        top: -40px;
+        justify-content: end;
+        right: 110px;
+        height: 33px;
+        width: 42px;
+    }
+
+    .head-box {
+        position: relative;
+
+        @include respond-below(lg) {
+            padding: 0 10px 0 0px;
+        }
+
+        @include respond-below(md) {
+            padding: 0;
+        }
+
+        @include respond-below(sm) {
+            padding: 0;
+        }
+
+
+        .logo {
+            .one {
+                display: none;
+
+            }
+        }
+    }
+}
+
+
+
+
+
+header .navigation {
+    position: relative;
+    line-height: 40px;
+    transition: 0.6s;
+    transition-property: line-height;
+    display: flex;
+    justify-content: end;
+}
+
+header.sticky {
+    top: -6px;
+
+    @include respond-below(lg) {
+        padding: 0 10px !important;
+        right: 0;
+    }
+
+    @include respond-below(md) {
+        padding: 0 0 !important;
+        right: 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 0 0 !important;
+        right: 0;
+    }
+}
+
+
+
+
+
+
+header.sticky .navigation {
+    line-height: 60px;
+}
+
+header .navigation .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select: none;
+    margin-bottom: 0;
+}
+
+.menu-item>a {
+    color: #fff !important;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin: 15px;
+    padding: 25px 0;
+
+    @include respond-below(xl) {
+        font-size: 16px;
+        margin: 10px;
+    }
+
+    i {
+        padding-left: 8px;
+        color: #fff;
+    }
+
+    .fa-home {
+        padding-left: 8px !important;
+        color: $brand-color !important;
+        font-size: 20px !important;
+
+        @include respond-below(lg) {
+            padding: 0 !important;
+        }
+    }
+}
+
+.menu-item>a:hover {
+    color: $brand-color;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.menu-item .sub-menu {
+    position: absolute;
+    background: #fff;
+    top: 45px;
+    line-height: 20px;
+    list-style: none;
+    border-radius: 0px 0px 10px 10px;
+    text-shadow: 0 5px 25px rgba(157, 10, 10, 0.2);
+    pointer-events: none;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+header.sticky .menu-item .sub-menu {
+    top: 60px;
+}
+
+.menu-item:hover .sub-menu {
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 1px 6px 12px 0px #ccc;
+}
+
+.menu-item .sub-menu .sub-item {
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #14180626;
+}
+
+.menu-item .sub-menu .sub-item a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0px 20px;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        color: #fff;
+    }
+
+    i {
+        margin: 2px 0 0 15px;
+    }
+}
+
+.menu-item .sub-menu .sub-item:hover {
+    background: $brand-color;
+}
+
+.menu-item .sub-menu .sub-item:hover a {
+    //  color: #fff;
+}
+
+.menu-item .sub-menu .sub-item:last-child:hover {
+    border-radius: 0 0 8px 8px;
+}
+
+.more .more-menu {
+    position: absolute;
+    background: #ffffff;
+    list-style: none;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    border-radius: 0 0px 10px 10px;
+    // overflow: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: transform, opacity;
+}
+
+.more:hover .more-menu {
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 1px 6px 12px 0px #ccc;
+}
+
+.more .more-menu .more-item {
+
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.more .more-menu .more-item:hover {
+    background: $brand-color;
+}
+
+
+
+.more:hover .more2 .more-menu {
+    opacity: 0;
+}
+
+.more2 .more-menu {
+    position: absolute;
+    background: #ffffff;
+    list-style: none;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    border-radius: 0 0px 10px 10px;
+    pointer-events: none;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+}
+
+.more2:hover .more-menu {
+    pointer-events: all;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1 !important;
+}
+
+.more2 .more-menu .more-item {
+
+    -webkit-box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.more2 .more-menu .more-item:hover {
+    background: $brand-color;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 1060px) {
+
+
+    .more:hover .more2 .more-menu {
+        opacity: 1;
+        background: #d3f382;
+    }
+
+    header .navigation .menu {
+        position: fixed;
+        display: block;
+        background: $brand-color;
+        min-width: 350px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 90px 50px;
+        visibility: hidden;
+        overflow-y: auto;
+        transition: 0.5s;
+        transition-property: right, visibility;
+    }
+
+    header.sticky .navigation {
+        line-height: 45px;
+    }
+
+    header .navigation .menu.active {
+        right: 0;
+        visibility: visible;
+    }
+
+    .menu-item {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .menu-item .sub-menu {
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateX(10px);
+        background: $brand-color;
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+    }
+
+    header.sticky .menu-item .sub-menu {
+        top: 0;
+    }
+
+    .menu-item:hover .sub-menu {
+        transform: translateX(10px);
+    }
+
+    .menu-item .sub-menu .sub-item {
+        box-shadow: none;
+    }
+
+    .menu-item .sub-menu .sub-item:hover {
+        background: none;
+    }
+
+    .menu-item .sub-menu .sub-item a:hover {
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .more .more-menu {
+        opacity: 1;
+        position: relative;
+        left: 0;
+        transform: translateY(0);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        display: none;
+        margin-top: 15px;
+    }
+
+    .more .more-menu .more-item {
+        box-shadow: none;
+    }
+
+    .more .more-menu .more-item:hover {
+        background: none;
+    }
+
+    .more .more-menu .more-item a {
+        margin-left: 20px;
+    }
+
+    .close-btn {
+        position: absolute;
+        background: url(../img/close.png)no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-position: center;
+        top: 0;
+        right: 0;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+    .menu-btn {
+        background: url(../img/menu.png)no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 29px;
+        background-position: center;
+        cursor: pointer;
+        display: block;
+        float: right;
+
+        @include respond-below(lg) {
+            width: 30px;
+        }
+
+        @include respond-below(md) {
+            width: 50px;
+        }
+
+        @include respond-below(sm) {
+            width: 44px;
+        }
+
+    }
+
+    header {
+        padding: 15px 0px;
+    }
+
+    .menu-item .sub-menu .sub-item a {
+        color: #fff;
+    }
+
+    header.sticky {
+        padding: 10px 20px;
+    }
+}
+
+
+
+// ==================================================================  HEADER TOP ARE START
+.header-top-area {
+
+    .top-section {
+        padding: 18px 100px 15px 100px;
+
+        @include respond-below(xl) {
+            padding: 18px 100px 20px 100px;
+        }
+
+        @include respond-below(lg) {
+            padding: 18px 180px 20px 30px;
+        }
+
+        @include respond-below(md) {
+            padding: 18px 90px 20px 30px;
+        }
+
+        @include respond-below(sm) {
+            padding: 9px 20px 0 20px;
+        }
+
+        .logo {
+
+            img {
+                width: 230px;
+
+                @include respond-below(lg) {
+                    width: 200px;
+                }
+
+                @include respond-below(md) {
+                    width: 180px;
+                }
+
+                @include respond-below(sm) {
+                    width: 160px;
+                }
+            }
+        }
+
+        .top-sec-right {
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include respond-below(sm) {
+                margin: 15px 0 0 0;
+            }
+
+            .col-md-3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .col-md-9 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include respond-below(sm) {
+                    display: none;
+                }
+            }
+
+            .language {
+
+                select {
+                    border: none;
+                    outline: none !important;
+                }
+
+                @include respond-below(sm) {
+                    position: fixed;
+                    top: 19px;
+                    right: 10px;
+                }
+
+            }
+
+            .search {}
+
+            .request-quotation {
+
+                @include respond-below(md) {
+                    display: none;
+                }
+
+                .btn {
+                    font-size: 16px;
+                    padding: 7px 16px 7px;
+                }
+
+            }
+        }
+    }
+}
+
+// ==================================================================  HEADER TOP ARE END
+
+
+
+/* ================== sticky ==================== */
+.navbar-scroll {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.6s;
+    height: auto;
+    width: 100%;
+}
+
+.navbar-scroll .nav-item .nav-link {
+    color: black;
+}
+
+.navbar-scroll .header-btn {
+    color: #ffffff;
+    background-color: #fe4066;
+}
+
+.navbar-scroll .logo img {
+    position: sticky;
+}
+
+.navbar-scroll .one {
+    display: inline-block !important;
+    width: 200px;
+    position: absolute !important;
+    top: 5px;
+    z-index: 999;
+}
+
+.navbar-scroll .logo_area .two {
+    width: 220px;
+    display: block;
+    position: absolute;
+    left: 38px;
+    top: 0px;
+}
+
+.navbar-scroll .logo_area .one {
+    opacity: 0;
+    transform: rotateX(-45deg);
+    transition: opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms, transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+
+.navbar-scroll .inner_main_menu ul {
+    padding-top: 30px;
+}
+
+.navbar-scroll .inner_menu {
+    width: 1360px;
+}
+
+.navbar-scroll .inner_main_menu {
+    width: 1040px;
+    transform: top translate(-100%);
+}
+
+
+
+@media only screen and (min-width : 1025px) and (max-width : 1440px) {
+
+    .title {
+        font-size: 2rem !important;
+    }
+
+    .navbar-scroll {
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+
+    .title {
+        font-size: 1.8rem !important;
+    }
+
+    .main .tab-menu-link {
+        width: calc(100% / 2) !important;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+
+    .navbar-scroll {
+        height: 55px;
+        border-radius: 0;
+    }
+
+    .navbar-scroll .one {
+        width: 170px;
+        top: 0px;
+    }
+
+    .product h4 {
+        margin-top: 130px !important;
+    }
+
+
+    .pro-read {
+        bottom: -80px !important;
+        padding: 10px 0 !important;
+    }
+
+
+}
+
+@media only screen and (min-width : 150px) and (max-width : 767px) {
+    .navbar-scroll {
+        height: 50px;
+        border-radius: 0;
+    }
+
+    .navbar-scroll .one {
+        top: 3px;
+        width: 150px;
+        left: 7px;
+    }
+}
+
+/* ================== sticky ==================== */

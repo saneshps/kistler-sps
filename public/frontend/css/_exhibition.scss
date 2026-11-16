@@ -1,0 +1,155 @@
+.exhibitions-home-area {
+
+    background: $brand-color;
+
+
+    padding: 90px 0 70px 0;
+
+    @include respond-below(xl) {
+        padding: 80px 0 100px 0;
+    }
+
+    @include respond-below(lg) {
+        padding: 80px 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 40px 0 70px 0;
+    }
+
+    .exhibitions-home {
+
+        padding-right: 80px;
+
+        @include respond-below(xl) {
+            padding-right: 30px;
+        }
+
+        @include respond-below(lg) {
+            padding-right: 30px;
+        }
+
+        @include respond-below(md) {
+            padding: 0 0 50px 0;
+        }
+
+
+        h2 {
+            position: relative;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            margin: 0 0 20px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 26px;
+                left: 0;
+                width: 70px;
+                height: 4px;
+                background: #fff;
+
+            }
+
+        }
+
+        p {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 400;
+        }
+
+        img {
+            width: auto;
+            margin-top: 20px;
+        }
+    }
+
+
+    .cutting-automation-box {
+
+
+        .exhibitionsSwiper {
+
+            .swiper-slide {
+                text-align: center;
+                border-radius: 6px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    border-radius: 6px;
+                }
+
+                h3 {
+                    line-height: 10px;
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        width: 100%;
+                        height: 100%;
+                        background: #32323282;
+                        z-index: 1;
+                        border-radius: 6px;
+                    }
+
+                    a {
+                        font-size: 1.3rem !important;
+                        color: #fff;
+                        text-decoration: none;
+                        position: relative;
+                        z-index: 9999;
+                        line-height: 24px;
+
+                        @include respond-below(lg) {
+                            font-size: 1.1rem !important;
+                        }
+
+                        &:hover {
+                            color: rgb(236, 236, 236);
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+
+            .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+            .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+                width: 25px !important;
+                height: 4px !important;
+                border-radius: 0 !important;
+                visibility: inherit !important;
+                margin: 50px 5px 0 5px !important;
+                background: #fff;
+            }
+
+            .swiper-pagination {
+                position: relative !important;
+            }
+
+
+        }
+    }
+
+}

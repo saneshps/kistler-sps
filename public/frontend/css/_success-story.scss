@@ -1,0 +1,192 @@
+.success-story-area {
+
+    background: url(../img/blogs/blog-bg-home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 120px 0 150px 0;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background: #0606068f;
+        z-index: 1;
+        border-radius: 6px;
+        z-index: 0;
+    }
+
+    @include respond-below(xl) {
+        padding: 80px 0 100px 0;
+    }
+
+    @include respond-below(lg) {
+        padding: 80px 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 40px 0 70px 0;
+    }
+
+    .success-home {
+
+        padding-right: 15px;
+        position: relative;
+        z-index: 99;
+
+        @include respond-below(lg) {
+            padding-right: 30px;
+            margin: 0 0 60px 0;
+        }
+
+        @include respond-below(md) {
+            padding: 0 0 20px 0;
+        }
+
+
+        h2 {
+            position: relative;
+            padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            margin: 0 0 20px 0;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 26px;
+                left: 0;
+                width: 70px;
+                height: 4px;
+                background: $brand-color;
+
+            }
+
+        }
+
+        p {
+            color: #fff;
+        }
+
+        img {
+            width: auto;
+            margin-top: 50px;
+            border-radius: 10px;
+
+            @include respond-below(xl) {
+                width: 70px;
+            }
+
+            @include respond-below(sm) {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin-right: 20px;
+                list-style: none;
+
+                @include respond-below(sm) {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+
+    .cutting-automation-box {
+
+
+        .successSwiper {
+
+            .swiper-slide {
+                padding: 5px 0px;
+                text-align: left;
+                border-radius: 6px;
+
+                img {
+                    width: 100%;
+                    margin: 0 0 30px 0;
+                    border-radius: 6px;
+                }
+
+                h3 {
+                    line-height: 10px;
+
+                    a {
+                        font-size: 1.3rem !important;
+                        color: #fff;
+                        text-decoration: none;
+
+                        @include respond-below(lg) {
+                            font-size: 1.1rem !important;
+                        }
+
+                        &:hover {
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+                p {
+                    color: #fff;
+                    margin: 20px 0 0 0;
+
+                    span {
+                        a {
+                            color: $brand-color;
+                            text-decoration: none;
+                            padding: 0 0 0 20px;
+                            font-weight: 800;
+
+                            @include respond-below(md) {
+                                padding: 0;
+                            }
+
+                            &:hover {
+                                color: #fff;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+            .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+            .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+                width: 25px !important;
+                height: 4px !important;
+                border-radius: 0 !important;
+                visibility: inherit !important;
+                margin: 50px 5px 0 5px !important;
+                background: #fff;
+            }
+
+            .swiper-pagination {
+                position: relative !important;
+            }
+
+
+        }
+    }
+
+}

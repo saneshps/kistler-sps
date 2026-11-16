@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Home | Kistler mechanical and plant engineering in Bad-Saulgau
+  </title>
+
+  <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!--// bootstrap -->
+
+  <!-- google font -->
+  <link rel="stylesheet" href="{{ asset('frontend/fonts/stylesheet.css') }}" />
+  <!-- google font -->
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!--// swiper -->
+
+  <link rel="shortcut icon" href="{{ asset('frontend/img/favicon/favicon.ico') }}" />
+  <link rel="shortcut icon" href="{{ asset('frontend/img/favicon/favicon-16x16.png') }}" />
+  <link rel="shortcut icon" href="{{ asset('frontend/img/favicon/favicon-32x32.png') }}" />
+
+  <!-- animate -->
+
+  <!-- animate -->
+</head>
+
+<body>
+  <!-- =====================
+          HEADER TOP START
+     ===================== -->
+  <section class="header-top-area">
+    <div class="top-section">
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-5 col-9">
+          <div class="logo">
+            <a href="index.html"> <img src="{{ asset('frontend/img/kistler-logo.png') }}" alt="logo" /> </a>
+          </div>
+        </div>
+
+        <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
+          <div class="top-sec-right">
+            <div class="row">
+              <!-- language -->
+              <div class="col-xl-3 col-lg-3 col-md-3 col-3">
+                <div class="language">
+                  <div class="js">
+                    <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
+                      <form action="" class="language-picker__form">
+                        <select name="language-picker-select" id="language-picker-select">
+                          <option lang="de" value="deutsch">Deutsch</option>
+                          <option lang="en" value="english" selected>
+                            English
+                          </option>
+                          <option lang="fr" value="francais">Français</option>
+                          <option lang="it" value="italiano">Italiano</option>
+                        </select>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- language -->
+
+              <!-- search -->
+              <div class="col-xl-5 col-lg-6 col-md-9 col-9">
+                <div class="search">
+                  <div class="wrapper">
+                    <div class="search-input">
+                      <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Type to search.." />
+                      <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                      <div class="icon"><i class="fas fa-search"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- search -->
+
+              <!-- Request Quotation -->
+              <div class="col-xl-4 col-lg-3 col-md-4">
+                <div class="request-quotation">
+                  <a href="#" class="btn btn-lg">
+                    <span>Request Quotation</span>
+                  </a>
+                </div>
+              </div>
+              <!-- Request Quotation -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =====================
+          HEADER TOP END
+     ===================== -->
+
+  <!--  HEADER START  -->
+
+  <header class="header">
+    <div class="container head-box">
+      <a href="index.html" class="logo">
+        <img class="one" src="{{ asset('frontend/img/sticky-logo.png') }}" alt="kistler logo" />
+      </a>
+
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+
+          <li class="menu-item">
+            <a class="sub-btn" href="#">
+              Our Company
+              <i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="#">Our Story</a></li>
+              <li class="sub-item"><a href="#">Our Team</a></li>
+              <li class="sub-item"><a href="#">Join the Team</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="sub-btn">
+              Products
+              <i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="products.html"> All Products </a></li>
+
+              <li class="sub-item more">
+                <a class="more-btn" href="#">
+                  Cutting
+                  <i class="fas fa-angle-right"></i>
+                </a>
+                <ul class="more-menu">
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      PLC Controlled
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">SCM 300</a></li>
+                      <li class="more-item"><a href="#">SCM 400</a></li>
+                      <li class="more-item"><a href="#">SCM 630</a></li>
+                    </ul> -->
+                  </li>
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      CNC Controlled
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">SCM 300</a></li>
+                      <li class="more-item"><a href="#">SCM 400</a></li>
+                      <li class="more-item"><a href="#">SCM 630</a></li>
+                    </ul> -->
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sub-item more">
+                <a class="more-btn" href="#">
+                  Welding
+                  <i class="fas fa-angle-right"></i>
+                </a>
+                <ul class="more-menu">
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      Pipe Rotary Jacks
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">U150</a></li>
+                      <li class="more-item"><a href="#">U 500</a></li>
+                      <li class="more-item"><a href="#">U 1000</a></li>
+                    </ul> -->
+                  </li>
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      Container Rotators
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">BR 2000</a></li>
+                      <li class="more-item"><a href="#">TRS60H-1</a></li>
+                      <li class="more-item"><a href="#">TRS400</a></li>
+                    </ul> -->
+                  </li>
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      Roratory Tilt Tables
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">R100</a></li>
+                      <li class="more-item"><a href="#">R300</a></li>
+                      <li class="more-item"><a href="#">HP 7500</a></li>
+                      <li class="more-item"><a href="#">L15000</a></li>
+                    </ul> -->
+                  </li>
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      Chuck
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">MC700</a></li>
+                    </ul> -->
+                  </li>
+                  <li class="sub-item more2">
+                    <a class="more-btn">
+                      Beam Welding Plants
+                      <!-- <i class="fas fa-angle-right"></i> -->
+                    </a>
+                    <!-- <ul class="more-menu">
+                      <li class="more-item"><a href="#">VBL Series</a></li>
+                      <li class="more-item"><a href="#">LBL Series</a></li>
+                    </ul> -->
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sub-item"><a href="#">BODE Products</a></li>
+              <li class="sub-item">
+                <a href="#">Custom Made Solutions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="sub-btn" href="#">
+              Industries
+              <i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="#">Oil And Gas</a></li>
+              <li class="sub-item"><a href="#">Steel Fabrication</a></li>
+              <li class="sub-item"><a href="#">Wind Energy</a></li>
+              <li class="sub-item"><a href="#">Ship Building</a></li>
+              <li class="sub-item"><a href="#">Power</a></li>
+              <li class="sub-item"><a href="#">Heavy Equipment</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#"> Success Stories </a></li>
+          <li class="menu-item"><a href="news.html"> News </a></li>
+          <li class="menu-item"><a href="blogs.html"> Blogs </a></li>
+          <li class="menu-item"><a href="#"> Distributors </a></li>
+          <li class="menu-item"><a href="contact.html"> Contact Us </a></li>
+        </ul>
+      </div>
+
+      <div class="menu-btn"></div>
+    </div>
+  </header>
+  <!--   HEADER END  -->
+
+
+  <!-- ===============
+            HERO START
+         =============== -->
+		 @yield('content')
+   <!-- =======================================
+          PERSONAL DISTRIBUTORS HOME AREA END
+      ========================================-->
+
+
+
+  <!-- ===================== 
+          FOOTER AREA START
+      ===================== -->
+  <footer class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-6 col-md-6 address">
+          <ul>
+            <li> <i class="fas fa-map-marker-alt"></i> </li>
+            <li>
+              <h5> <span> Kistler Cutting and Welding Techniques GmbH, </span> <br>
+                Mackstrasse 84, <br>
+                88348 Bad Saulgau, Germany </h5>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-lg-12 col-md-12 f-logo">
+          <img src="{{ asset('frontend/img/footer-logo.png') }}" alt="kistler logo">
+
+          <h5> Your specialist for the automation of
+            cutting and welding processes </h5>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-md-6 f-contact">
+          <ul>
+            <li> <i class="fas fa-phone"></i> </li>
+            <li>
+              Telephone : +49 / 7581 / 48882-0 <br>
+              Fax : +49 / 7581 / 4 888 222 <br>
+              info@kistler-machine.de <br>
+              www.kistler-machine.com
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================
+          FOOTER AREA END
+      ====================-->
+
+  <!-- =============================
+          BOTTOM FOOTER AREA START
+      ============================== -->
+  <section class="footer-bottom-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 first">
+          <h6> © KISTLER GmbH – All rights reserved – Imprint I Conditions I Privacy Policy </h6>
+        </div>
+        <div class="col-md-4 second">
+          <ul>
+            <li> <a href="https://www.facebook.com/kistlergmbh" target="_blank"> <i class="fab fa-facebook"></i> </a>
+            </li>
+            <li> <a href="#"> <i class="fab fa-instagram"></i></a> </li>
+            <li> <a href="#"><i class="fab fa-twitter"></i> </a> </li>
+            <li> <a href="https://www.youtube.com/channel/UCEjQM7LDqsARPt1CdUTDifg" target="_blank"> <i
+                  class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===========================
+          BOTTOM FOOTER AREA END
+      ============================ -->
+
+
+
+  <!-- ===========================
+         ENQUIRE BUTTON AREA START
+      ============================ -->
+  <!-- Bothelp.io widget -->
+  <script
+    type="text/javascript">!function () { var e = { "buttons": [{ "type": "whatsapp", "token": "4915222972391" }, { "type": "email", "token": "info@kistler-machine.de" }, { "type": "call", "token": "497581488820" }], "color": "#007A39", "position": "right", "bottomSpacing": "100", "callToActionMessage": "Enquire Now", "displayOn": "everywhere", "lang": "en" }, t = document.location.protocol + "//bothelp.io", o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = t + "/widget-folder/widget-page.js", o.onload = function () { new BhWidgetPage.init(e) }; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(o, n) }();</script>
+  <!-- /Bothelp.io widget -->
+
+  <!-- ===========================
+         ENQUIRE BUTTON AREA END
+      ============================ -->
+
+
+
+
+
+
+
+
+
+  <!-- ===========================
+         ENQUIRE BUTTON AREA START
+      ============================ -->
+  <!-- Bothelp.io widget -->
+  <script
+    type="text/javascript">!function () { var e = { "buttons": [{ "type": "whatsapp", "token": "4915222972391" }, { "type": "email", "token": "info@kistler-machine.de" }, { "type": "call", "token": "497581488820" }], "color": "#007A39", "position": "right", "bottomSpacing": "100", "callToActionMessage": "Enquire Now", "displayOn": "everywhere", "lang": "en" }, t = document.location.protocol + "//bothelp.io", o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = t + "/widget-folder/widget-page.js", o.onload = function () { new BhWidgetPage.init(e) }; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(o, n) }();</script>
+  <!-- /Bothelp.io widget -->
+
+  <!-- ===========================
+         ENQUIRE BUTTON AREA END
+      ============================ -->
+
+  <!-- ============================
+            BACK TO BUTTON START
+         ============================-->
+  <a href="#" id="top">
+    <i class="fas fa-long-arrow-alt-up"></i>
+  </a>
+  <!-- ============================
+           BACK TO BUTTON END
+       ============================-->
+
+  <!-- =====================
+          JS AREA START
+     ===================== -->
+
+  <!-- social media -->
+  <script src="{{ asset('frontend/js/social.js') }}"></script>
+  <!-- social media -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- swiper -->
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="{{ asset('frontend/js/swiper-bundle.min.js') }}"></script>
+
+  <script src="{{ asset('frontend/js/main.js') }}"></script>
+  <!-- back to top -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="{{ asset('frontend/js/script.js') }}"></script>
+  <!--// back to top -->
+
+
+  <script src="{{ asset('frontend/js/header.js') }}"></script>
+
+  <!-- animate aos -->
+  <script>
+    AOS.init()
+  </script>
+
+  <!--// animate aos -->
+
+  <!-- search box -->
+  <script src="{{ asset('frontend/js/search.js') }}"></script>
+  <script src="{{ asset('frontend/js/suggestions.js') }}"></script>
+  <!-- search box -->
+
+  <!-- hero -->
+  <script src="{{ asset('frontend/js/slider.js') }}"></script>
+  <!-- hero -->
+
+  <!-- product -->
+  <script src="{{ asset('frontend/js/product.js') }}"></script>
+  <!-- product -->
+
+  <!-- industries -->
+  <script src="{{ asset('frontend/js/industries.js') }}"></script>
+  <!-- // industries -->
+
+  <!-- blog -->
+  <script src="{{ asset('frontend/js/blog.js') }}"></script>
+  <!-- blog -->
+
+  <!-- counters -->
+  <script src="{{ asset('frontend/js/counters.js') }}"></script>
+  <!-- counters -->
+  <!-- news -->
+  <script src="{{ asset('frontend/js/news.js') }}"></script>
+  <!-- news -->
+
+  <!-- distributors -->
+  <script src="{{ asset('frontend/js/distributors.js') }}"></script>
+  <!-- distributors -->
+
+
+  <!-- exhibition -->
+  <script src="{{ asset('frontend/js/exhibitions.js') }}"></script>
+  <!-- exhibition -->
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+
+  <!-- sticky menu -->
+  <!-- <script type="text/javascript">
+    $(function () {
+      var navbar = $('.header');
+      $(window).scroll(function () {
+        if ($(window).scrollTop() <= 40) {
+          navbar.removeClass('navbar-scroll');
+        } else {
+          navbar.addClass('navbar-scroll');
+        }
+      });
+    });
+  </script> -->
+  <!--// sticky menu -->
+
+  <!-- =====================
+          JS AREA END
+     ===================== -->
+</body>
+
+</html>

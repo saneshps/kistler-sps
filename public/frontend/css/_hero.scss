@@ -1,0 +1,427 @@
+.hero-area {
+    position: relative;
+    top: -50px;
+
+    @include respond-below(sm) {
+        top: -30px;
+    }
+
+    .heroSwiper {
+        position: relative;
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer;
+            width: 30px;
+            border-radius: 0;
+            height: 4px;
+            opacity: 1;
+            background: #fff;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #007a39 !important;
+        }
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .slider-text {
+                position: absolute;
+                background: #007a39;
+                padding: 40px 60px;
+                width: 900px;
+                left: 120px;
+                border-radius: 10px;
+
+                @include respond-below(lg) {
+                    padding: 40px 40px 40px 30px;
+                    width: 52%;
+                    left: 40px;
+                    margin: 0 auto;
+                    background: #007a3973;
+                }
+
+                @include respond-below(md) {
+                    padding: 40px 40px 30px 30px;
+                    width: 62%;
+                    left: 40px;
+                    margin: 0 auto;
+                    background: #007a3973;
+                }
+
+                @include respond-below(sm) {
+                    padding: 40px 20px 20px 20px;
+                    width: 93%;
+                    left: 0;
+                    margin: 0 auto;
+                    right: 0;
+                }
+
+                h1 {
+                    line-height: 62px;
+                    color: #fff;
+                    font-size: 3.6rem;
+                    font-weight: 700;
+
+                    @include respond-below(xl) {
+                        line-height: 65px;
+                        font-size: 3.5rem;
+                    }
+
+                    @include respond-below(lg) {
+                        line-height: 44px;
+                        font-size: 2.5rem;
+                    }
+
+                    @include respond-below(md) {
+                        line-height: 40px;
+                        font-size: 2.2rem;
+                    }
+
+                    @include respond-below(sm) {
+                        line-height: 30px;
+                        font-size: 1.6rem;
+                    }
+                }
+
+                p {
+                    line-height: 25px;
+                    color: #fff;
+                }
+
+
+            }
+
+            img {
+                width: 100%;
+                height: 800px;
+                object-fit: cover;
+
+                @include respond-below(xl) {
+                    height: 700px;
+                }
+
+                @include respond-below(lg) {
+                    height: 490px;
+                }
+
+                @include respond-below(md) {
+                    height: 420px;
+                }
+
+                @include respond-below(sm) {
+                    height: 80vh;
+                }
+            }
+        }
+
+
+        &.contact-page {
+            position: relative;
+
+            .swiper-slide {
+                img {
+                    @include respond-below(sm) {
+                        height: 100vh;
+                    }
+                }
+            }
+
+
+            .form-box {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                z-index: 999;
+
+
+                .form-bg {
+
+                    .form-container {
+                        text-align: center;
+                        padding: 0 20px;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+
+
+                    .form-container .form-horizontal {
+                        background-color: $brand-color;
+                        padding: 50px 0;
+                        border-radius: 6px;
+
+                        @include respond-below(xl) {
+                            padding: 30px 0;
+                        }
+
+                        @include respond-below(lg) {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    .form-container .form-horizontal .heading {
+                        color: #fff;
+                        font-size: 40px !important;
+                        font-weight: 600;
+                        margin: 0 0 30px 0;
+
+                        @include respond-below(xl) {
+                            font-size: 30px !important;
+                        }
+
+                        @include respond-below(lg) {
+                            font-size: 26px !important;
+                            margin: 0 0 10px 0;
+                        }
+                    }
+
+                    .form-container .form-horizontal span {
+                        color: rgba(0, 0, 0, .7);
+                        font-size: 18px;
+                        margin: 0 0 30px 0;
+                        display: block;
+                    }
+
+                    .form-container .form-horizontal .form-group {
+                        width: 70%;
+                        margin: 0 auto;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-bottom: none;
+                        position: relative;
+
+                        @include respond-below(lg) {
+                            width: 90%;
+                        }
+                    }
+
+                    .form-container .form-horizontal .form-group textarea {
+                        height: 120px;
+                    }
+
+                    ::placeholder {
+                        color: #ffffff86 !important;
+                        opacity: 1;
+                    }
+
+                    .form-container .form-horizontal .form-group:nth-child(5) {
+
+                        margin: 0 auto 15px;
+                    }
+
+                    .form-container .form-horizontal i.icon {
+                        color: #ffffff86;
+                        font-size: 18px;
+                        position: absolute;
+                        left: 12px;
+                        top: 16px;
+                    }
+
+                    .form-container .form-horizontal .form-control {
+                        height: 50px;
+                        font-size: 15px;
+                        padding: 10px 8px 10px 40px;
+                        margin: 0 0 20px 0 !important;
+                        background: $brand-color;
+                        color: #fff !important;
+                        border: 1px solid #ffffff !important;
+
+                        @include respond-below(lg) {
+                            padding: 10px 8px 10px 40px;
+                            margin: 0 0 6px 0 !important;
+                        }
+                    }
+
+                    .form-container .form-control::placeholder {
+                        color: rgba(0, 0, 0, 0.2);
+                    }
+
+                    .form-container .form-horizontal .form-control:focus {
+                        box-shadow: none;
+                    }
+
+                    .form-container .form-horizontal .btn {
+                        color: $brand-color;
+                        background-color: #fff;
+                        padding: 6px 20px;
+                        font-size: 18px;
+                        border: 2px solid transparent;
+                        transition: all 0.5s;
+                    }
+
+                    .form-container .form-horizontal .btn:hover {
+                        color: $brand-color;
+                        background-color: #fff;
+                        border: 2px solid #fff;
+                    }
+
+                    .form-container .login-form ul {
+                        list-style: none;
+                        padding: 25px 0;
+                        margin: 0;
+                    }
+
+                    .form-container .login-form ul li {
+                        margin: 0 5px;
+                        display: inline-block;
+                    }
+
+                    .form-container .login-form ul li:first-child {
+                        border-right: 1px solid #fff;
+                    }
+
+                    .form-container .login-form ul li a {
+                        color: #fff;
+                        padding: 0 10px 0 0;
+                        transition: all 0.5s;
+                    }
+
+                    .form-container .login-form ul li a:hover {
+                        text-decoration: underline;
+                    }
+
+                    @media screen and (max-width: 576px) {
+                        .form-container {
+                            padding: 0 10px;
+                        }
+
+                        .form-container .form-horizontal span {
+                            font-size: 15px;
+                        }
+
+                        .form-container .form-horizontal .form-group {
+                            width: 90%;
+                        }
+                    }
+
+
+                }
+
+                .contact-address {
+
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    height: 100%;
+                    flex-direction: column;
+                    margin: 10px 0 0 0;
+
+                    .cnt-details {
+
+                        background: #fff;
+                        padding: 20px 30px;
+                        border-radius: 6px;
+                        width: 360px;
+
+                        @include respond-below(md) {
+                            padding: 15px 10px;
+                            width: 340px;
+                        }
+
+                        li {
+                            list-style: none;
+                            color: #333;
+                            line-height: 28px;
+                            position: relative;
+
+
+
+                            span {
+                                list-style: none;
+                                color: #333;
+                                line-height: 28px;
+                                position: absolute;
+                                top: 0;
+                                left: 90px;
+                                font-weight: 600;
+
+                                a {
+                                    color: #333;
+                                    text-decoration: none;
+                                    padding-left: 10px;
+
+                                    &:hover {
+                                        color: $brand-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .address-area {
+                        background: #fff;
+                        padding: 20px 30px;
+                        border-radius: 6px;
+                        width: 360px;
+
+                        @include respond-below(md) {
+                            padding: 15px 10px;
+                            width: 340px;
+                        }
+
+                        li {
+                            list-style: none;
+                            color: #333;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .slider-text-inner {
+        position: absolute;
+        top: 0;
+        bottom: 30px;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            padding: 25px 100px;
+            color: #fff;
+            background: #686868;
+            border-radius: 6px;
+
+            @include respond-below(lg) {
+                padding: 25px 50px;
+            }
+
+            @include respond-below(md) {
+                padding: 25px 50px;
+            }
+
+            @include respond-below(sm) {
+                padding: 25px 40px;
+            }
+        }
+    }
+
+    // &.shadow {
+
+    //     &::before {
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //         height: 100%;
+    //         width: 100%;
+
+    //     }
+
+    // }
+}
